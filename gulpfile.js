@@ -1,4 +1,5 @@
 const gulp = require("gulp");
+const imagemin = require("gulp-imagemin");
 const sass = require("gulp-sass")(require("sass"));
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
@@ -7,8 +8,12 @@ const concat = require("gulp-concat");
 const terser = require("gulp-terser");
 const sourcemaps = require("gulp-sourcemaps");
 const browserSync = require("browser-sync").create();
-
 const { src, series, parallel, dest, watch } = require("gulp");
+
+// Optimize image
+function imgTask() {
+  return src("app/images/*").pipe(imagemin()).pipe(gulp.dest("dist/images"));
+}
 
 // Sass task
 function sassTask() {
@@ -55,7 +60,13 @@ function browserSyncReload(cb) {
 
 // Watch task
 function watchTask() {
-  watch(["*.html", "app/sass/**/*.scss", "app/js/**/*.js"], parallel(sassTask, jsTask, browserSyncReload));
+  watch(
+    ["*.html", "app/sass/**/*.scss", "app/js/**/*.js"],
+    parallel(sassTask, jsTask, browserSyncReload)
+  );
 }
 
-exports.default = series(parallel(sassTask, jsTask, browserSyncServe), watchTask);
+exports.default = series(
+  parallel(imgTask, sassTask, jsTask, browserSyncServe),
+  watchTask
+);
