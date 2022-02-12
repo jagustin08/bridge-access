@@ -17,3 +17,25 @@ body {
   font-family: var(--ff-rubik);
   font-size: rem(16);
 }
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: var(--orange);
+  display: flex;
+  justify-content: center;
+
+  .preloader-logo {
+    width: 80%;
+    max-width: rem(500);
+
+    path, rect {
+      stroke-linecap: square;
+      fill: rgba(255, 255, 255, 0);
+    }    
+  }
+}
