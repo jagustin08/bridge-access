@@ -1,0 +1,3 @@
+@use "abstracts"; //contains global mixins, functions, helper selectors, etc.
+@use "base"; //contains global styles, such as resets, typography, colors, etc.
+@use "sections"; //contains page-specific styling, if necessary

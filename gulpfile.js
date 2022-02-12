@@ -2,7 +2,7 @@ const gulp = require("gulp");
 const sass = require("gulp-sass")(require("sass"));
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
-const cssnano = require('cssnano');
+const cssnano = require("cssnano");
 const concat = require("gulp-concat");
 const terser = require("gulp-terser");
 const sourcemaps = require("gulp-sourcemaps");
@@ -19,6 +19,16 @@ function sassTask() {
     .pipe(postcss([autoprefixer(), cssnano()]))
     .pipe(sourcemaps.write("."))
     .pipe(dest("dist/css"));
+}
+
+// JS task
+function jsTask() {
+  return src("app/js/**/main.js")
+    .pipe(sourcemaps.init())
+    .pipe(concat("main.js"))
+    .pipe(terser())
+    .pipe(sourcemaps.write("."))
+    .pipe(dest("dist/js"));
 }
 
 // Browsersync
@@ -45,8 +55,7 @@ function browserSyncReload(cb) {
 
 // Watch task
 function watchTask() {
-  // watch("*.html", parallel(htmlTask, browserSyncReload));
-  watch(["app/sass/**/main.scss"], parallel(sassTask, browserSyncReload));
+  watch(["*.html", "app/sass/**/*.scss", "app/js/**/*.js"], parallel(sassTask, jsTask, browserSyncReload));
 }
 
-exports.default = series(parallel(sassTask, browserSyncServe), watchTask);
+exports.default = series(parallel(sassTask, jsTask, browserSyncServe), watchTask);
