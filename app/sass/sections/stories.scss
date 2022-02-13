@@ -1,0 +1,21 @@
+@use "./../abstracts" as *;
+
+.stories {
+    text-align: center;
+
+    .swiper-slide {
+        padding: 0 5%;
+        box-sizing: border-box;
+    }
+
+    .lead {
+        font-size: rem(16);
+        font-weight: 900;
+    }
+
+    .img-circle {
+        border-radius: 50%;
+        display: block;
+        margin: 0 auto;
+    }
+}

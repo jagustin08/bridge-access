@@ -8,12 +8,12 @@
     <link rel="icon" type="image/x-icon" href="https://bridgeaccesssea-ho.azurewebsites.net/assets/ho/images/favicon-a.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />    
     <link rel="stylesheet" href="/dist/css/main.css">
 </head>
 <body>
-    <div class="preloader">
+    <!-- <div class="preloader">
       <svg class="preloader-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 542.81 96.54">
         <g id="Layer_2" data-name="Layer 2">
           <g id="Layer_1-2" data-name="Layer 1">
@@ -30,7 +30,7 @@
           </g>
         </g>
       </svg>
-    </div>
+    </div> -->
 
     <header class="main-header">
       <div class="container">
@@ -72,65 +72,85 @@
           <div class="hero-text">
             <h1 class="fadeInUp">Secure Liquidity for Everyone</h1>
             <p class="fadeInUp">Access partners with companies and communities to provide financial solutions which best fits their need.</p>
+            <a href="javascript:;" class="btn-cta">Contact us</a>
           </div>
         </div>
       </section>
 
       <section class="platforms">
-        <h1>Our Platforms</h1>
-        <article>
-          <h2>Access Corporate</h2>
-          <picture>
-            <img src="/dist/images/corporate.jpg" alt="">
-          </picture>
-          <p>We partner with companies to provide financial services for all employees. We make sure employees have access to affordable salary loans, automated savings, easy investments and pre paid protection.</p>
-          <a href="javascript:;" class="btn-link learn-more">Learn more</a>
-        </article>
-
-        <article>          
-          <h2>Access Community</h2>
-          <picture>
-            <img src="/dist/images/community.jpg" alt="">
-          </picture>          
-          <p>We partner with different communities and provide technology powered financial services. We understand that each community has it's own unique requirements and we specialize  in serving those needs.</p>
-          <a href="javascript:;" class="btn-link learn-more">Learn more</a>
-        </article>        
+        <div class="container">
+          <h1 class="title">Our Platforms</h1>
+          <article>
+            <picture>
+              <img src="/dist/images/corporate.jpg" alt="">
+            </picture>
+            <h2 class="sub-title">Access Corporate</h2>
+            <p>We partner with companies to provide financial services for all employees. We make sure employees have access to affordable salary loans, automated savings, easy investments and pre paid protection. <a href="javascript:;" class="btn-link learn-more">Learn more</a></p>            
+          </article>
+  
+          <article>          
+            <picture>
+              <img src="/dist/images/community.jpg" alt="">
+            </picture>          
+            <h2 class="sub-title">Access Community</h2>
+            <p>We partner with different communities and provide technology powered financial services. We understand that each community has it's own unique requirements and we specialize  in serving those needs. <a href="javascript:;" class="btn-link learn-more">Learn more</a></p>            
+          </article>        
+        </div>
       </section>
 
       <section class="secure">
-        <h1>Access Secure</h1>
-        <p>Access makes it easy for anyone to become financially secure with affordable loans, protection and stash</p>
-
-        <div class="secure-icons">
-          <img src="/dist/images/secure_credit.png" alt="">
-          <img src="/dist/images/secure_protection.png" alt="">
-          <img src="/dist/images/secure_stash.png" alt="">
-        </div>
-
-        <div class="secure-text">
-          <article class="secure-text-1">
-            <h2>Ready Credit</h2>
-            <p>Affordable, transparent salary loans for employees as well as MSME and personal loans made specifically for your community</p>
-          </article>
-
-          <article class="secure-text-2">
-            <h2>Ready Credit</h2>
-            <p>Affordable, transparent salary loans for employees as well as MSME and personal loans made specifically for your community</p>
-          </article>
-
-          <article class="secure-text-3">
-            <h2>Ready Credit</h2>
-            <p>Affordable, transparent salary loans for employees as well as MSME and personal loans made specifically for your community</p>
-          </article>
+        <div class="container">
+          <h1 class="title">Access Secure</h1>
+          <p>Access makes it easy for anyone to become financially secure with affordable loans, protection and stash</p>
+  
+          <div class="secure-text">
+            <article class="secure-text-1">
+              <img src="/dist/images/secure_credit.png" alt="" class="secure-icons">
+              <h2 class="sub-title">Ready Credit</h2>
+              <p>Affordable, transparent salary loans for employees as well as MSME and personal loans made specifically for your community</p>
+            </article>
+  
+            <article class="secure-text-2">
+              <img src="/dist/images/secure_protection.png" alt="" class="secure-icons">
+              <h2 class="sub-title">Protection</h2>
+              <p>Pre paid, low cost accident and health and individual life coverage, with the top insurance providers in the Philippines</p>              
+            </article>
+  
+            <article class="secure-text-3">
+              <img src="/dist/images/secure_stash.png" alt="" class="secure-icons">
+              <h2 class="sub-title">Stash</h2>
+              <p>Stash away with low barrier products and be financially prepared for any of life's unexpected surprises</p>              
+            </article>
+          </div>          
         </div>
       </section>
 
       <section class="stories">
         <div class="swiper">
           <div class="swiper-wrapper">
-            <div class="swiper-slide">Slide 1</div>
-            <div class="swiper-slide">Slide 2</div>
-            <div class="swiper-slide">Slide 3</div>
+            <div class="swiper-slide">
+              <picture>
+                <img src="/dist/images/stories_3.jpg" alt="" class="img-circle">                
+              </picture>
+              <p class="lead">Access Helps Me Provide for My Family</p>
+              <p>As the main provider of the family, I always make sure that their needs are provided and secured. Thankfully, our company has given us financial benefits that we can go to. <a href="javascript:;" class="btn-link">Read more</a></p>              
+            </div>
+
+            <div class="swiper-slide">
+              <picture>
+                <img src="/dist/images/stories_1.jpg" alt="" class="img-circle">
+              </picture>
+              <p class="lead">Access Stash Helped Me Do What I Love</p>
+              <p>I was having a hard time to save for travel since I have a bad habit when it comes to handling my money which ends up with me having no personal savings. Because of this, I&apos;ve decided to save with Access. <a href="javascript:;" class="btn-link">Read more</a></p>
+            </div>
+
+            <div class="swiper-slide">
+              <picture>
+                <img src="/dist/images/stories_2.jpg" alt="" class="img-circle">                
+              </picture>
+              <p class="lead">The Pandemic Helped Me Save More, Not Less</p>
+              <p>I’m at the age where I have to think of my future. I wanted to save up as much as I could, so I decided that in addition to my savings deduction through Access. <a href="javascript:;" class="btn-link">Read more</a></p>              
+            </div>
           </div>
           
           <div class="swiper-pagination"></div>
@@ -142,7 +162,28 @@
     </main>
 
     <footer class="main-footer">
-      <p>Copyright &copy; 2020 Bridge Access Financing inc.</p>
+
+      <div class="container">
+        <div class="left">
+          <img src="/dist/images/SVG/footer_logo.svg" alt="" class="footer-logo">
+          <ul>
+            <li><a href="javascript:;" class="btn-link">Privacy Policty</a></li>
+            <li><a href="javascript:;" class="btn-link">Terms of Service</a></li>
+          </ul>
+        </div>
+
+        <div class="right">
+          <div class="social-icons">
+            <a href="javascript:;"><img src="/dist/images/SVG/icon_facebook.svg" alt=""></a>
+            <a href="javascript:;"><img src="/dist/images/SVG/icon_twitter.svg" alt=""></a>
+            <a href="javascript:;"><img src="/dist/images/SVG/icon_pinterest.svg" alt=""></a>
+            <a href="javascript:;"><img src="/dist/images/SVG/icon_instagram.svg" alt=""></a>            
+          </div>
+          <p><small>&copy; 2020 Bridge Access Financing inc.</small></p>
+        </div>
+      </div>
+
+
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>

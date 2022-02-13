@@ -1,0 +1,11 @@
+@use "./../abstracts" as *;
+
+.secure {
+    text-align: center;
+    background: var(--lightGray);    
+
+    .secure-icons {
+        display: block;
+        margin: 0 auto;
+    }
+}
