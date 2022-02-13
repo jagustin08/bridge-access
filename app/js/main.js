@@ -27,7 +27,7 @@ logoStrokes.forEach((logoStroke) => {
     }, "-=10%")
     .set('body', {
       overflow: 'auto',
-    })
+    }, '<')
     .fromTo( ".hero-img", 0.4, { 
       scale: 1.1, 
       ease: Power2.easeOut, 
