@@ -7,5 +7,5 @@ $browser-context: 16;
 }
 
 @function vw($pixels, $content: 750) {
-  @return math.div($pixels, $context) * 100vw;
+  @return math.div($pixels, $content) * 100vw;
 }
