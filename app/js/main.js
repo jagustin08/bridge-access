@@ -32,15 +32,15 @@ logoStrokes.forEach(logoStroke => {
     }, {
       scale: 1,
       filter: 'blur(0px)'
-    }, '-=90%')
+    }, '<')
     .fromTo('.main-header', 0.4, {
       yPercent: -100,
     }, {
       yPercent: 0,
       ease: Power2.easeOut,
       delay: 0.4,      
-    }, '-=40%')    
-    .to('.hero .fadeInUp', 0.4, {
+    }, '-=50%')    
+    .to('.hero .fadeInUp', 1, {
       opacity: 1,
       y: 0,
       stagger: 0.15,
