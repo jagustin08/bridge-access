@@ -37,8 +37,13 @@ body {
   color: #fff;
   text-decoration: none;;
   border-radius: rem(10);
-  font-size: vw(18);
-  padding: vw(8) vw(12);
+  font-size: rem(18);
+  padding: rem(8) rem(12);
+  display: inline-block;
+
+  &:active {
+    transform: scale(0.98);
+  }
 
   &:hover {
     background: var(--darkOrange);
@@ -82,5 +87,6 @@ ul {
   .btn-cta {
     font-size: rem(18);
     padding: rem(8) rem(12);
+    border-radius: rem(10);
   }
 }
