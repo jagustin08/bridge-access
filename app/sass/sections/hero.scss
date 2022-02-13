@@ -2,7 +2,6 @@
 
 .hero {
   height: 100vh;
-  padding-top: rem(64);
 
   .hero-wrapper {
     position: relative;
@@ -11,6 +10,7 @@
     display: flex;
     align-items: center;
     overflow: hidden;
+    padding-top: rem(64);
   }
 
   .hero-img {

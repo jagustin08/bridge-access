@@ -2,7 +2,7 @@
 
 .platforms {
   text-align: center;
-  padding: vw(50) 0;
+  padding: rem(30) 0;
 
   .container {
     display: grid;
@@ -18,11 +18,13 @@
   }
 
   img {
-    margin: 0 auto vw(30);
+    margin-left: auto;
+    margin-right: auto;
+    margin: 0 auto rem(30);
   }
 
   p {
-      margin-bottom: vw(15);
+    margin-bottom: vw(15);
   }
 }
 
@@ -35,6 +37,10 @@
       justify-content: space-between;
     }
 
+    article {
+      text-align: left;
+    }
+
     .title {
       margin-bottom: rem(50);
       font-size: rem(36);
@@ -45,12 +51,11 @@
     }
 
     p {
-      text-align: left;
       margin-bottom: rem(15);
     }
 
     img {
-      margin: 0 auto rem(30);
+      margin-left: 0;
     }
   }
 }

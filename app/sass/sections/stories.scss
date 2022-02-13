@@ -1,21 +1,53 @@
 @use "./../abstracts" as *;
 
 .stories {
-    text-align: center;
+  text-align: center;
+  padding: rem(30) 0;
 
-    .swiper-slide {
-        padding: 0 5%;
-        box-sizing: border-box;
-    }
+  .title {
+    margin-bottom: rem(30);
+    font-size: rem(36);
+  }
 
-    .lead {
-        font-size: rem(16);
-        font-weight: 900;
-    }
+  .swiper {
+    padding-bottom: rem(20);
+  }
 
-    .img-circle {
-        border-radius: 50%;
-        display: block;
-        margin: 0 auto;
+  .swiper-pagination {
+    bottom: 0;
+  }
+
+  .swiper-slide {
+    padding: 0 5%;
+    box-sizing: border-box;
+
+    p {
+      max-width: rem(800);
+      margin: 0 auto;
     }
+  }
+
+  .lead {
+    font-size: rem(16);
+    font-weight: 900;
+    margin-bottom: rem(8);
+  }
+
+  picture {
+    margin-bottom: rem(15);
+  }
+
+  .img-circle {
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .stories {
+    .swiper {
+      padding-bottom: rem(30);
+    }
+  }
 }

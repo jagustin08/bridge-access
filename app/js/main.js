@@ -45,7 +45,7 @@ logoStrokes.forEach((logoStroke) => {
     }, "-=50%" )
     .to(".hero .fadeInUp", 1, {
       opacity: 1,
-      y: 0,
+      top: 0,
       stagger: 0.15,
       ease: Power2.easeOut,
     });
@@ -87,6 +87,7 @@ navToggle.addEventListener("click", () => {
 const swiper = new Swiper(".swiper", {
   direction: "horizontal",
   loop: true,
+  autoplay: true,
 
   pagination: {
     el: ".swiper-pagination",

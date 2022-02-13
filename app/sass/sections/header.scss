@@ -82,17 +82,16 @@
 }
 
 // Medium devices (tablets, 768px and up)
-@media (min-width: 768px) { 
-
+@media (min-width: 768px) {
   .main-header {
     .logo {
       width: rem(150);
     }
   }
- }
+}
 
 // Large devices (desktops, 992px and up)
-@media (min-width: 992px) { 
+@media (min-width: 992px) {
   .main-header {
     .container {
       flex-flow: row wrap;
@@ -106,14 +105,13 @@
     .main-nav {
       display: flex;
       flex-basis: auto;
-      height: auto!important;
+      height: auto !important;
 
       .nav {
         flex-direction: row;
         margin-left: auto;
         gap: rem(30);
       }
-
     }
-  }  
- }
+  }
+}
