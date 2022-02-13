@@ -2,7 +2,6 @@
 
 // preloader animation
 const logoStrokes = document.querySelectorAll( ".preloader-logo path, .preloader-logo rect" );
-
 logoStrokes.forEach((logoStroke) => {
   const preloaderTimeline = gsap.timeline();
 
@@ -26,6 +25,9 @@ logoStrokes.forEach((logoStroke) => {
       height: "0%", 
       ease: Power2.easeOut 
     }, "-=10%")
+    .set('body', {
+      overflow: 'auto',
+    })
     .fromTo( ".hero-img", 0.4, { 
       scale: 1.1, 
       ease: Power2.easeOut, 
