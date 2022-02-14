@@ -30,6 +30,9 @@ logoStrokes.forEach((logoStroke) => {
     .set('body', {
       overflow: 'auto',
     }, '<')
+    .set('.preloader', {
+      display: 'none'
+    })    
     .fromTo( ".hero-img", 0.4, { 
       scale: 1.1, 
       ease: Power2.easeOut, 
@@ -103,6 +106,7 @@ const swiper = new Swiper(".swiper", {
   },
 });
 
+// add fadeIn animation to all element that has fadeInUp
 gsap.utils.toArray(".fadeInUp:not(.hero .fadeInUp)").forEach((el, i) => {
   gsap.to(el, 0.4, {
     top: 0,
@@ -114,3 +118,23 @@ gsap.utils.toArray(".fadeInUp:not(.hero .fadeInUp)").forEach((el, i) => {
     }
   })
 });
+
+// pin hero animation
+const heroAnimation = gsap.timeline();
+
+ScrollTrigger.create({
+  animation: heroAnimation,
+  trigger: ".hero",
+  start: "top top",
+  endTrigger: ".stories",
+  end: "top top",
+  scrub: true,
+})
+
+heroAnimation.to(".hero-img", 10, {
+  scale: 1.1,  
+  opacity: 0,
+})
+.to(".hero-text", 8, {
+  top: "60%",
+}, "<")

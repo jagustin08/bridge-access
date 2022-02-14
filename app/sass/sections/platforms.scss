@@ -3,6 +3,9 @@
 .platforms {
   text-align: center;
   padding: rem(30) 0;
+  position: relative;
+  background: var(--white) ;
+  z-index: 2;
 
   .container {
     display: grid;

@@ -1,8 +1,10 @@
 @use "./../abstracts" as *;
 
 .stories {
+  background: var(--white);
   text-align: center;
   padding: rem(30) 0;
+  position: relative;
 
   .title {
     margin-bottom: rem(30);
