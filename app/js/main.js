@@ -27,12 +27,6 @@ logoStrokes.forEach((logoStroke) => {
       height: "0%", 
       ease: Power2.easeOut 
     }, "-=10%")
-    .set('body', {
-      overflow: 'auto',
-    }, '<')
-    .set('.preloader', {
-      display: 'none'
-    })    
     .fromTo( ".hero-img", 0.4, { 
       scale: 1.1, 
       ease: Power2.easeOut, 
@@ -42,6 +36,12 @@ logoStrokes.forEach((logoStroke) => {
       scale: 1, 
       filter: "blur(0px)" 
     }, "<" )
+    .set('body', {
+      overflow: 'auto',
+    }, '<')
+    .set('.preloader', {
+      display: 'none'
+    })    
     .fromTo( ".main-header", 0.4, { 
       yPercent: -100 
     },
