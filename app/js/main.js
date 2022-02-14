@@ -1,5 +1,7 @@
 "use strict";
 
+gsap.registerPlugin(ScrollTrigger);
+
 // preloader animation
 const logoStrokes = document.querySelectorAll( ".preloader-logo path, .preloader-logo rect" );
 logoStrokes.forEach((logoStroke) => {
@@ -99,4 +101,16 @@ const swiper = new Swiper(".swiper", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+});
+
+gsap.utils.toArray(".fadeInUp:not(.hero .fadeInUp)").forEach((el, i) => {
+  gsap.to(el, 0.4, {
+    top: 0,
+    opacity: 1,
+    ease: Power2.easeOut,
+    scrollTrigger: {
+      trigger: el,
+      start: "top 90%",
+    }
+  })
 });
